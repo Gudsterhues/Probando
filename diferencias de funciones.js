@@ -1,9 +1,9 @@
 
 function RegularPar(numero) {
   if (numero % 2 === 0) {
-    console.log(`Regular: ${numero} es PAR`);
+    console.log(`Es par`);
   } else {
-    console.log(`Regular: ${numero} es IMPAR`);
+    console.log(`Es impar`);
   }
 }
 
