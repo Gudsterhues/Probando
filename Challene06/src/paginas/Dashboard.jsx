@@ -8,7 +8,7 @@ function Dashboard() {
 
   const handleLogout = () => {
     logout();
-    navigate("/login");
+    navigate("/EntradaFirebase");
   };
 
   return (
@@ -20,9 +20,7 @@ function Dashboard() {
         <p>contraseña: {user?.password}</p>
 
         <div>
-          <Link to="/cajero">Ir al challenge de Cajero</Link>
-          <br />
-          <Link to="/libros">Ir al challenge de Libros</Link>
+          <Link to="/tasks">Ir a la asignacion de tareas</Link>
         </div>
 
         <button onClick={handleLogout}>Cerrar sesión</button>

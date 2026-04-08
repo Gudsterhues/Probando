@@ -1,16 +1,18 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import PrivateRoute from "./routes/PrivateRoute.jsx";
-import Login from "./paginas/Login.jsx";
+import EntradaFirebase from "./paginas/signWithEmailAndPassword.jsx";
 import Dashboard from "./paginas/Dashboard.jsx";
-import ProyectoUno from "./paginas/Cajero.jsx";
-import ProyectoDos from "./paginas/libros.jsx";
 import NotFound from "./paginas/Notfound.jsx";
+import Register from "./paginas/Register.jsx";
+import Tasks from "./paginas/Tasks.jsx";
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Navigate to="/login" replace />} />
-      <Route path="/login" element={<Login />} />
+      <Route path="/" element={<Navigate to="/EntradaFirebase" replace />} />
+      <Route path="/EntradaFirebase" element={<EntradaFirebase />} />
+
+      <Route path="/Register" element={<Register />} />
 
       <Route
         path="/dashboard"
@@ -22,22 +24,15 @@ function App() {
       />
 
       <Route
-        path="/cajero"
+        path="/tasks"
         element={
           <PrivateRoute>
-            <ProyectoUno />
+            <Tasks />
           </PrivateRoute>
         }
       />
 
-      <Route
-        path="/libros"
-        element={
-          <PrivateRoute>
-            <ProyectoDos />
-          </PrivateRoute>
-        }
-      />
+      
 
       <Route path="*" element={<NotFound />} />
     </Routes>

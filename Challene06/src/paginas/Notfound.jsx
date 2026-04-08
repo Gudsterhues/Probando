@@ -6,7 +6,7 @@ function NotFound() {
       <div className="card">
         <h1>404</h1>
         <p>Página no encontrada</p>
-        <Link to="/login">Ir al login</Link>
+        <Link to="/EntradaFirebase">Ir al login</Link>
       </div>
     </div>
   );
