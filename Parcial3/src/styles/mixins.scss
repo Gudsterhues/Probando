@@ -1,0 +1,27 @@
+@mixin panel {
+  background: $color-panel;
+  border: 1px solid $color-borde;
+  border-radius: 22px;
+  padding: 24px;
+  box-shadow: $sombra-panel;
+  backdrop-filter: blur(14px);
+}
+
+@mixin campo {
+  width: 100%;
+  padding: 15px 16px;
+  border: 1px solid $color-borde;
+  border-radius: 16px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.08);
+  color: $color-texto;
+  font-size: 15px;
+}
+
+@mixin boton {
+  border: none;
+  border-radius: 16px;
+  padding: 14px 16px;
+  cursor: pointer;
+  font-weight: 800;
+}
